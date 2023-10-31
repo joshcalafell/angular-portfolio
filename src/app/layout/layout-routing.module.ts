@@ -9,14 +9,13 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-
     children: [
+      { path: '', redirectTo: 'elements', pathMatch: 'full' },
       { path: 'elements', component: ElementsTableComponent },
       { path: 'folders', component: FolderTreeComponent },
       { path: 'dashboard', component: DashboardComponent },
     ],
   },
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
+import {
+  MatTreeFlatDataSource,
+  MatTreeFlattener,
+} from '@angular/material/tree';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { files } from './example-data';
 
@@ -24,10 +27,9 @@ export interface FlatTreeNode {
 @Component({
   selector: 'app-folder-tree',
   templateUrl: './folder-tree.component.html',
-  styleUrls: ['./folder-tree.component.scss']
+  styleUrls: ['./folder-tree.component.scss'],
 })
 export class FolderTreeComponent {
-
   /** The TreeControl controls the expand/collapse state of tree nodes.  */
   treeControl: FlatTreeControl<FlatTreeNode>;
 
@@ -42,10 +44,14 @@ export class FolderTreeComponent {
       this.transformer,
       this.getLevel,
       this.isExpandable,
-      this.getChildren);
+      this.getChildren
+    );
 
     this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
-    this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+    this.dataSource = new MatTreeFlatDataSource(
+      this.treeControl,
+      this.treeFlattener
+    );
     this.dataSource.data = files;
   }
 
@@ -55,7 +61,7 @@ export class FolderTreeComponent {
       name: node.name,
       type: node.type,
       level,
-      expandable: !!node.children
+      expandable: !!node.children,
     };
   }
 

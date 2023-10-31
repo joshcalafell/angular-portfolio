@@ -2,12 +2,15 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { ElementsTableDataSource, ElementsTableItem } from './elements-table-datasource';
+import {
+  ElementsTableDataSource,
+  ElementsTableItem,
+} from './elements-table-datasource';
 
 @Component({
   selector: 'app-elements-table',
   templateUrl: './elements-table.component.html',
-  styleUrls: ['./elements-table.component.scss']
+  styleUrls: ['./elements-table.component.scss'],
 })
 export class ElementsTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

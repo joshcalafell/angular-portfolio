@@ -43,8 +43,6 @@ import { FolderTreeComponent } from '../components/folder-tree/folder-tree.compo
     MatTableModule,
     MatToolbarModule,
     MatTreeModule,
-    RouterModule,
-    RouterTestingModule,
   ],
 })
 export class LayoutModule {}

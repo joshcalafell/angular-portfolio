@@ -15,8 +15,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTreeModule } from '@angular/material/tree';
-import { ActivatedRoute, RouterModule } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
 import { DashboardComponent } from '../components/dashboard/dashboard.component';
 import { ElementsTableComponent } from '../components/elements-table/elements-table.component';
 import { FolderTreeComponent } from '../components/folder-tree/folder-tree.component';

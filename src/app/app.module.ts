@@ -12,10 +12,14 @@ import { FolderTreeComponent } from './components/folder-tree/folder-tree.compon
 import { MatTreeModule } from '@angular/material/tree';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
-  declarations: [AppComponent, ElementsTableComponent, FolderTreeComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatTableModule, MatPaginatorModule, MatSortModule, MatTreeModule, MatIconModule, MatButtonModule],
+  declarations: [AppComponent, ElementsTableComponent, FolderTreeComponent, DashboardComponent],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatTableModule, MatPaginatorModule, MatSortModule, MatTreeModule, MatIconModule, MatButtonModule, MatGridListModule, MatCardModule, MatMenuModule],
   providers: [],
   bootstrap: [AppComponent],
 })

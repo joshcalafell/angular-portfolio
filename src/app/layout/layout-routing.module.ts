@@ -1,8 +1,23 @@
+import { DashboardComponent } from '../components/dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout.component';
+import { ElementsTableComponent } from '../components/elements-table/elements-table.component';
+import { FolderTreeComponent } from '../components/folder-tree/folder-tree.component';
 
-const routes: Routes = [{ path: '', component: LayoutComponent }];
+const routes: Routes = [
+  {
+    path: '',
+    component: LayoutComponent,
+
+    children: [
+      { path: 'elements', component: ElementsTableComponent },
+      { path: 'folders', component: FolderTreeComponent },
+      { path: 'dashboard', component: DashboardComponent },
+    ],
+  },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

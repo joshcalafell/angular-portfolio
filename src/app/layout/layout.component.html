@@ -7,31 +7,7 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
-    <mat-toolbar><svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-      <!-- Define the lighting filter for the 3D effect -->
-      <defs>
-        <filter id="f1" x="0" y="0" width="150%" height="150%">
-          <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
-          <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3" />
-          <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
-        </filter>
-      </defs>
-
-      <!-- Create the letter "R" with the 3D effect -->
-      <text x="20" y="50" font-family="Arial" font-size="40" fill="blue">
-        <tspan x="20" dy="0" filter="url(#f1)">R</tspan>
-      </text>
-
-      <!-- Create the letter "F" with the 3D effect -->
-      <text x="80" y="50" font-family="Arial" font-size="40" fill="red">
-        <tspan x="80" dy="0" filter="url(#f1)">F</tspan>
-      </text>
-
-      <!-- Create the letter "S" with the 3D effect -->
-      <text x="140" y="50" font-family="Arial" font-size="40" fill="green">
-        <tspan x="140" dy="0" filter="url(#f1)">S</tspan>
-      </text>
-    </svg>
+    <mat-toolbar>
      &nbsp;Menu</mat-toolbar>
     <mat-nav-list>
       <a

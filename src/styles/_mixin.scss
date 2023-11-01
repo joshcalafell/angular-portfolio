@@ -27,23 +27,3 @@ $largest: 1500px;
   justify-content: end;
 }
 
-@mixin crosshatch-lavendar() {
-  background-color: $color-lavendar;
-  background-image: repeating-linear-gradient(
-      -45deg,
-      $color-lavendar,
-      $color-lavendar,
-      10%,
-      transparent 5%,
-      transparent 20%
-    ),
-    repeating-linear-gradient(
-      45deg,
-      $color-lavendar,
-      $color-lavendar 10%,
-      transparent 25%,
-      transparent 20%
-    ) !important;
-
-  background-size: 5px 5px !important;
-}

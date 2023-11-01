@@ -6,14 +6,3 @@
 
 /* App global styles go here */
 
-body {
-  @include crosshatch-lavendar();
-}
-
-a {
-  cursor: pointer;
-}
-
-.mat-button {
-  text-decoration: none !important;
-}

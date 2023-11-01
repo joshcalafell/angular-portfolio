@@ -1,0 +1,19 @@
+@import "./mixin";
+
+@import url("https://fonts.googleapis.com/css2?family=Inters:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+/* App global styles go here */
+
+body {
+  @include crosshatch-lavendar();
+}
+
+a {
+  cursor: pointer;
+}
+
+.mat-button {
+  text-decoration: none !important;
+}

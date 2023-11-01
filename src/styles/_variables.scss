@@ -1,0 +1,65 @@
+// ------------------------------
+// Variables to use in 4thID app.
+// ------------------------------
+
+// Colors Greyscale
+$color-darkest: #282b24;
+$color-med: #818181;
+$color-med-dark: #515258;
+$color-grey: #a0a0a0;
+$color-light-grey: #e0e0e0;
+$color-light: #d8d8d8;
+
+// Colors
+$color-primary: #4369d5;
+$color-lavendar: #f3f3ff;
+$color-yellow: #fafad2;
+$color-red: rgb(250, 74, 68);
+$color-green: rgb(68, 210, 144);
+$color-blue: rgba(17, 189, 241, 0.9);
+$color-orange: #eda343;
+
+// Dimensions
+$dimensions-sm: 8px;
+$dimensions-md: 16px;
+$dimensions-lg: 24px;
+$dimensions-xl: 32px;
+$dimensions-xxl: 64px;
+
+$dimensions-common: $dimensions-md;
+$dimensions-icon: $dimensions-xxl;
+
+// Font Sizes
+$font-size-small: 14px;
+$font-size-common: 16px;
+$font-size-med: 18px;
+$font-size-large: 24px;
+
+$font-weight-bold: 700;
+
+// fonts
+$font-family-headline: "Oswald";
+$font-family-body: "Nunito Sans";
+$font-family-title: "Nunito Sans";
+
+// Container (Not currently used)
+$container-max-widths: (
+  sm: 600px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1600px,
+);
+
+// Breakpoints (Not currently used)
+$grid-breakpoints: (
+  xs: 0,
+  // handset portrait (small, medium, large) | handset landscape (small)
+  sm: 600px,
+  // handset landscape (medium, large) | tablet portrait(small, large)
+  md: 960px,
+  //  tablet landscape (small, large)
+  lg: 1280px,
+  // laptops and desktops
+  xl: 1600px
+    // large desktops,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+);

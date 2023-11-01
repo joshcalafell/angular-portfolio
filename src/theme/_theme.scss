@@ -1,0 +1,150 @@
+@use "@angular/material" as mat;
+@import "@angular/material/theming";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+// *** DO NOT IMPORT THIS!!! It is imported in angular.json in "styles" array *** //
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+  $font-family: 'Inter',
+  $headline: mat.define-typography-level(32px, 48px, 700),
+  $body-1: mat.define-typography-level(16px, 24px, 500),
+);
+
+@include angular-material-typography($custom-typography);
+
+$pallete-portal-primary: (
+  50: #e4eaf9,
+  100: #bdcaf0,
+  200: #91a7e6,
+  300: #6483dc,
+  400: #4369d5,
+  500: #4369d5,
+  600: #1e47c8,
+  700: #193dc1,
+  800: #1435ba,
+  900: #0c25ae,
+  A100: #dbdfff,
+  A200: #a8b3ff,
+  A400: #7586ff,
+  A700: #5c6fff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #ffffff,
+  ),
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$palette-portal-accent: (
+  50: #eaeaeb,
+  100: #cbcbcd,
+  200: #a8a9ac,
+  300: #85868a,
+  400: #6b6c71,
+  500: #515258,
+  600: #4a4b50,
+  700: #404147,
+  800: #37383d,
+  900: #27282d,
+  A100: #829af8,
+  A200: #5273f5,
+  A400: #1544ff,
+  A700: #0032fb,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$palette-portal-warning: (
+  50: #fee4e8,
+  100: #fcbcc5,
+  200: #fa909f,
+  300: #f86479,
+  400: #f7425c,
+  500: #f5213f,
+  600: #f41d39,
+  700: #f21831,
+  800: #f01429,
+  900: #ee0b1b,
+  A100: #ffffff,
+  A200: #ffe5e6,
+  A400: #ffb2b5,
+  A700: #ff989d,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$portal-primary: mat.define-palette($pallete-portal-primary, 500, A400);
+$portal-accent: mat.define-palette($palette-portal-accent, 500, 200, 200);
+
+// The warn palette is optional (defaults to red).
+$portal-warn: mat.define-palette($palette-portal-warning, 400);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$portal-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $portal-primary,
+      accent: $portal-accent,
+      warn: $portal-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($portal-theme);
+
+/* You can add global styles to this file, and also import other style files */

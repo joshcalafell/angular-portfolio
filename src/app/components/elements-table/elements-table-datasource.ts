@@ -111,6 +111,8 @@ export class ElementsTableDataSource extends DataSource<ElementsTableItem> {
           return compare(a.name, b.name, isAsc);
         case 'id':
           return compare(+a.id, +b.id, isAsc);
+        case 'formula':
+          return compare(a.formula, b.formula, isAsc);
         default:
           return 0;
       }

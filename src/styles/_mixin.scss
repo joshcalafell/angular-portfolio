@@ -1,0 +1,49 @@
+@import "variables";
+
+$small: 300px;
+$medium: 900px;
+$large: 1150px;
+$larger: 1300px;
+$largest: 1500px;
+
+@mixin flex-row() {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flex-row-start() {
+  @include flex-row();
+  justify-content: flex-start;
+}
+
+@mixin flex-row-center() {
+  @include flex-row();
+  justify-content: center;
+}
+
+@mixin flex-row-end() {
+  @include flex-row();
+  justify-content: end;
+}
+
+@mixin crosshatch-lavendar() {
+  background-color: $color-lavendar;
+  background-image: repeating-linear-gradient(
+      -45deg,
+      $color-lavendar,
+      $color-lavendar,
+      10%,
+      transparent 5%,
+      transparent 20%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      $color-lavendar,
+      $color-lavendar 10%,
+      transparent 25%,
+      transparent 20%
+    ) !important;
+
+  background-size: 5px 5px !important;
+}
